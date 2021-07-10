@@ -1,0 +1,93 @@
+//import
+@import "fonts";
+@import "variables";
+
+//Styles
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url(../img/bg.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 57vmax;
+  @media screen and(max-width: 992px) {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+}
+
+//navbar
+.custom-nav {
+  .navbar-brand {
+    span {
+      color: $tertiaryColor;
+      font-weight: 700;
+      font-size: 1.1em;
+    }
+  }
+  #navbarNav {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: $tertiaryColor;
+          font-weight: 500;
+          margin-left: 1.2em;
+          transition: 0.3s color ease;
+
+          &:hover {
+            color: $secondaryColor;
+          }
+        }
+        .sign-up-button {
+          background-color: #fff;
+          color: $tertiaryColor;
+          border-radius: 10px;
+          border: 0px;
+          font-weight: 700;
+          text-transform: uppercase;
+          padding: 10px 20px;
+          transition: 0.8s color ease;
+
+          &:hover {
+            background-color: darken($color: #fff, $amount: 90%);
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    margin-top: -1em;
+  }
+}
+
+//custom-section
+.custom-section {
+  margin-top: 10em;
+  h2 {
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: $tertiaryColor;
+  }
+  p {
+    color: $textColor;
+    margin-top: 1.5em;
+  }
+  .get-started-button {
+    background-color: $primaryColor;
+    color: #fff;
+    border: 0;
+    border-radius: 20px;
+    font-weight: 700;
+    padding: 10px 15px;
+    margin-bottom: 200px;
+  }
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    h2 {
+      margin-top: 8rem;
+    }
+  }
+}
